@@ -1,4 +1,4 @@
 name: jeremiecarlson.com
 markdown: redcarpet
 pygments: true
-baseurl: ""
+baseurl: "jeremiecarlson.com"
