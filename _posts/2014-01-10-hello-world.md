@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Hello World
-date: 2014/1/10
+date: 2014/1/10 21:21:37
+categories: blog
 ---
 
-## Hello World
-### An attempt at working with Jekyll, Markdown, and Github Pages
+## An attempt at working with Jekyll, Markdown, and Github Pages
 
 Let's see how this thing works
 

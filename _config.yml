@@ -2,3 +2,5 @@ name: jeremiecarlson.com
 markdown: redcarpet
 pygments: true
 baseurl: "/jeremiecarlson.com"
+permalink: pretty
+paginate: 5

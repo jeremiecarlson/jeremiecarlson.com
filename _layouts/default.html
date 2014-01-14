@@ -1,9 +1,12 @@
 {% include head.html %}
-
-    <h1>{{ page.title }}</h1>
-
+	
+	{% include nav.html %}
+	<header>
+		<h1>jeremiecarlson.com</h1>
+		<p>a place to house some thoughts and things</p>
+	</header>
+	<div role="main">
     {{ content }}
-
-    {% include nav.html %}
+    </div>
 
 {% include foot.html %}

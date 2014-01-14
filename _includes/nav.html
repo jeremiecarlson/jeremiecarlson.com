@@ -1,9 +1,14 @@
 <nav class="nav-primary" role="navigation" >
+	<a href="{{ site.baseurl }}/" title="Return to home">Home</a>
     <ul>
-        {% for p in site.posts %}
-        <li>
-        	<a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
-        </li>
-        {% endfor %}
+		<li>
+			<a href="{{ site.baseurl }}/About/">About</a>
+		</li>
+		<!-- <li>
+			<a href="{{ site.baseurl }}/Blog/">Blog</a>
+		</li> -->
+		<li>
+			<a href="{{ site.baseurl }}/Contact/">Contact</a>
+		</li>
     </ul>
 </nav>
