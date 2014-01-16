@@ -1,12 +1,10 @@
 {% include head.html %}
-	
-	{% include nav.html %}
 	<header>
-		<h1>jeremiecarlson.com</h1>
+		<h1><a href="{{ site.baseurl }}/">jeremiecarlson.com</a></h1>
 		<p>a place to house some thoughts and things</p>
+		{% include nav.html %}
 	</header>
 	<div role="main">
     {{ content }}
     </div>
-
 {% include foot.html %}

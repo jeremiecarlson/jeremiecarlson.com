@@ -1,0 +1,20 @@
+// Colors
+
+$copy-color: #444;
+$copy-color-light: #efefef;
+$main-color: #74c27a;
+$accent-color: #f1667d;
+
+// Fonts
+
+$serif: Georgia, Times, "Times New Roman", serif;
+$sans-serif: "museo-sans",sans-serif;
+$base-font-size: 16px;
+
+// Setting baseline styles
+
+html, button, input, select, textarea{
+	font-family: $serif;
+	font-size: $base-font-size;
+	color: $copy-color;
+}

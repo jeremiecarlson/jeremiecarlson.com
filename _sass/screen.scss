@@ -4,6 +4,16 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 
-body{
-	background: white;
-}
+/* Vendor Dependencies */
+@import "compass";
+@import "global/imports/normalize.css";
+
+/* Authored Dependencies */
+@import "global/mixins/bp.scss";
+
+/* Patterns */
+@import "global/global.scss";
+
+/* Sections */
+@import "global/header.scss";
+@import "global/footer.scss";
