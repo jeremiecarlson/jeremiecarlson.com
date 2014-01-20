@@ -532,11 +532,195 @@ table {
 
 /* Authored Dependencies */
 /* Patterns */
-/* line 16, ../_sass/global/global.scss */
+/* apply a natural box layout model to all elements */
+/* line 17, ../_sass/global/global.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 21, ../_sass/global/global.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 25, ../_sass/global/global.scss */
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+/* line 29, ../_sass/global/global.scss */
 html, button, input, select, textarea {
   font-family: Georgia, Times, "Times New Roman", serif;
-  font-size: 16px;
   color: #444444;
 }
 
+/* line 36, ../_sass/global/global.scss */
+a {
+  color: #74c27a;
+}
+/* line 18, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:visited {
+  color: #74c27a;
+}
+/* line 21, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:focus {
+  color: #68ae6d;
+}
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:hover {
+  color: #68ae6d;
+}
+/* line 27, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:active {
+  color: #5c9b61;
+}
+
+/* line 40, ../_sass/global/global.scss */
+.button, input.button {
+  color: white;
+  background: #74c27a;
+}
+
+/* line 47, ../_sass/global/global.scss */
+.headline, h1, .h1, h2, .h2, h3, .h3 {
+  font-family: "museo-sans", sans-serif;
+  font-weight: 300;
+}
+
+/* line 52, ../_sass/global/global.scss */
+h1, .h1 {
+  font-size: 30px;
+  font-size: 3rem;
+}
+
+/* line 56, ../_sass/global/global.scss */
+h2, .h2 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+/* line 60, ../_sass/global/global.scss */
+h3, .h3 {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
 /* Sections */
+/* line 1, ../_sass/global/header.scss */
+.site-header {
+  background: #74c27a;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* line 8, ../_sass/global/header.scss */
+.site-header a {
+  color: white;
+  text-decoration: none;
+}
+/* line 18, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.site-header a:visited {
+  color: white;
+}
+/* line 21, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.site-header a:focus {
+  color: #e5e5e5;
+}
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.site-header a:hover {
+  color: #e5e5e5;
+}
+/* line 27, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.site-header a:active {
+  color: #cccccc;
+}
+
+/* line 13, ../_sass/global/header.scss */
+.site-headline {
+  font-size: 30px;
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* line 18, ../_sass/global/header.scss */
+.site-sub-headline {
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin: -.3em 0 0 .7em;
+}
+
+/* line 23, ../_sass/global/header.scss */
+.site-header:after {
+  position: absolute;
+  bottom: -310px;
+  left: -300px;
+  content: "";
+  display: block;
+  width: 0;
+  height: 10px;
+  border: 300px solid transparent;
+  border-top-width: 10px;
+  border-top-color: #74c27a;
+  z-index: -1;
+}
+
+/* line 1, ../_sass/global/nav.scss */
+.nav-primary {
+  margin: 10px 0 0 0;
+  border-top: 1px solid #f1667d;
+}
+
+/* line 6, ../_sass/global/nav.scss */
+.nav-primary ul {
+  margin: .4em 0 0 0;
+  padding: 0;
+}
+
+/* line 11, ../_sass/global/nav.scss */
+.nav-primary li {
+  display: inline-block;
+  padding: 0 1em 0 0;
+}
+
+/* line 1, ../_sass/global/main-content.scss */
+.main-content {
+  padding: 20px;
+  z-index: 1;
+}
+
+/* line 8, ../_sass/global/main-content.scss */
+.article-li {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #f1667d;
+}
+
+/* line 14, ../_sass/global/main-content.scss */
+.article-li:last-child {
+  border: none;
+}
+
+/* line 20, ../_sass/global/main-content.scss */
+.article-li .headline, .post-header .headline {
+  margin-bottom: 0;
+}
+/* line 23, ../_sass/global/main-content.scss */
+.article-li .headline a, .post-header .headline a {
+  text-decoration: none;
+}
+/* line 28, ../_sass/global/main-content.scss */
+.article-li .meta, .post-header .meta {
+  margin: 0;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+/* line 1, ../_sass/global/post.scss */
+.post {
+  max-width: 500px;
+  margin: 0 auto;
+}

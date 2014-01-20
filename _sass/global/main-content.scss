@@ -1,0 +1,32 @@
+.main-content{
+	padding: 20px;
+	z-index: 1;
+}
+
+// article lister
+
+.article-li{
+	padding-bottom: 2em;
+	margin-bottom: 2em;
+	border-bottom: 1px solid $accent-color;
+}
+
+.article-li:last-child{
+	border: none;
+}
+
+.article-li, .post-header{
+
+	.headline{
+		margin-bottom: 0;
+
+		a{
+			text-decoration: none;
+		}
+	}
+
+	.meta{
+		margin: 0;
+		@include font-size(1.4);
+	}
+}

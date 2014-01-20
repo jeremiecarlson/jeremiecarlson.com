@@ -1,0 +1,35 @@
+.site-header{
+	background: $main-color;
+	color: $copy-color-light;
+	padding: 10px 20px;
+	position: relative;
+}
+
+.site-header a{
+	@include link-colors($copy-color-light, shade($copy-color-light, 10%),shade($copy-color-light, 20%), $copy-color-light, shade($copy-color-light, 10%));
+	text-decoration: none;
+}
+
+.site-headline{
+	@include font-size(3);
+	margin: 0;
+}
+
+.site-sub-headline{
+	@include font-size(1.4);
+	margin: -.3em 0 0 .7em;
+}
+
+.site-header:after{
+	position: absolute;
+	bottom: -310px;
+	left: -300px;
+	content: "";
+	display: block;
+	width: 0;
+	height: 10px;
+	border: 300px solid transparent;
+	border-top-width: 10px;
+	border-top-color: $main-color;
+	z-index: -1;
+}

@@ -10,10 +10,14 @@
 
 /* Authored Dependencies */
 @import "global/mixins/bp.scss";
+@import "global/mixins/font-size.scss";
 
 /* Patterns */
 @import "global/global.scss";
 
 /* Sections */
 @import "global/header.scss";
+@import "global/nav.scss";
+@import "global/main-content.scss";
+@import "global/post.scss";
 @import "global/footer.scss";
