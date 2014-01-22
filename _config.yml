@@ -1,6 +1,6 @@
 name: jeremiecarlson.com
 markdown: redcarpet
 pygments: true
-baseurl: "/jeremiecarlson.com"
+baseurl: ""
 permalink: pretty
 paginate: 5
