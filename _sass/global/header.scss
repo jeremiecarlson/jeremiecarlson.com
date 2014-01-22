@@ -1,12 +1,12 @@
 .site-header{
 	background: $main-color;
 	color: $copy-color-light;
-	padding: 10px 20px;
+	padding: 10px 20px 15px 20px;
 	position: relative;
 }
 
 .site-header a{
-	@include link-colors($copy-color-light, shade($copy-color-light, 10%),shade($copy-color-light, 20%), $copy-color-light, shade($copy-color-light, 10%));
+	@include link-colors($copy-color-light);
 	text-decoration: none;
 }
 
@@ -22,14 +22,14 @@
 
 .site-header:after{
 	position: absolute;
-	bottom: -310px;
-	left: -300px;
+	bottom: -15px;
+	left: -270px;
 	content: "";
 	display: block;
 	width: 0;
-	height: 10px;
-	border: 300px solid transparent;
-	border-top-width: 10px;
+	height: 15px;
+	border: 270px solid transparent;
+	border-bottom-width: 0;
+	border-top-width: 15px;
 	border-top-color: $main-color;
-	z-index: -1;
 }

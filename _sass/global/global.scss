@@ -4,6 +4,7 @@ $copy-color: #444;
 $copy-color-light: #fff;
 $main-color: #74c27a;
 $accent-color: #f1667d;
+$accent-light: #f6faf6;
 
 // Fonts
 
@@ -34,7 +35,8 @@ html, button, input, select, textarea{
 // links and buttons
 
 a{
-	@include link-colors($main-color, shade($main-color, 10%),shade($main-color, 20%), $main-color, shade($main-color, 10%));
+	@include link-colors($main-color, shade($main-color, 20%),shade($main-color, 30%), $main-color, shade($main-color, 20%));
+	transition: color 200ms ease-out;
 }
 
 .button, input.button{
@@ -61,4 +63,10 @@ h3, .h3{
 	@include font-size(1.8);
 }
 
+// preformatted code blocks
 
+pre{
+	padding: 20px;
+	background: $accent-light;
+	border-radius: 6px;
+}

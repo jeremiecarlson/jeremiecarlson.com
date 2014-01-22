@@ -1,4 +1,6 @@
 .main-content{
+	// margin-top: 40px;
+	border-top: 40px solid $accent-light;
 	padding: 20px;
 	z-index: 1;
 }
@@ -6,6 +8,8 @@
 // article lister
 
 .article-li{
+	max-width: 500px;
+	margin: 0 auto;
 	padding-bottom: 2em;
 	margin-bottom: 2em;
 	border-bottom: 1px solid $accent-color;
@@ -18,7 +22,7 @@
 .article-li, .post-header{
 
 	.headline{
-		margin-bottom: 0;
+		margin: 0;
 
 		a{
 			text-decoration: none;

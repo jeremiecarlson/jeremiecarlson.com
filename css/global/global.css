@@ -1,11 +1,11 @@
 /*
 Syntax error: Undefined mixin 'font-size'.
-        on line 26 of /Users/jeremiecarlson/Documents/jeremiecarlson/jeremiecarlson.com/_sass/global/global.scss, in `font-size'
-        from line 26 of /Users/jeremiecarlson/Documents/jeremiecarlson/jeremiecarlson.com/_sass/global/global.scss
+        on line 27 of /Users/jeremiecarlson/Documents/jeremiecarlson/jeremiecarlson.com/_sass/global/global.scss, in `font-size'
+        from line 27 of /Users/jeremiecarlson/Documents/jeremiecarlson/jeremiecarlson.com/_sass/global/global.scss
 
 Backtrace:
-/Users/jeremiecarlson/Documents/jeremiecarlson/jeremiecarlson.com/_sass/global/global.scss:26:in `font-size'
-/Users/jeremiecarlson/Documents/jeremiecarlson/jeremiecarlson.com/_sass/global/global.scss:26
+/Users/jeremiecarlson/Documents/jeremiecarlson/jeremiecarlson.com/_sass/global/global.scss:27:in `font-size'
+/Users/jeremiecarlson/Documents/jeremiecarlson/jeremiecarlson.com/_sass/global/global.scss:27
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
@@ -69,4 +69,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'font-size'.\A         on line 26 of /Users/jeremiecarlson/Documents/jeremiecarlson/jeremiecarlson.com/_sass/global/global.scss, in `font-size'\A         from line 26 of /Users/jeremiecarlson/Documents/jeremiecarlson/jeremiecarlson.com/_sass/global/global.scss"; }
+  content: "Syntax error: Undefined mixin 'font-size'.\A         on line 27 of /Users/jeremiecarlson/Documents/jeremiecarlson/jeremiecarlson.com/_sass/global/global.scss, in `font-size'\A         from line 27 of /Users/jeremiecarlson/Documents/jeremiecarlson/jeremiecarlson.com/_sass/global/global.scss"; }
