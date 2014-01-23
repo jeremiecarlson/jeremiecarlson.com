@@ -72,7 +72,7 @@ var ajax = {
 var loadDisqus = {
 
 	settings: {
-		username: "jeremiecarlson",
+		username: "jeremiecarlsoncom",
 		commentsContainer: $("#disqus_thread")[0],
     	showButton: $("#show-comments")[0]
 	},
