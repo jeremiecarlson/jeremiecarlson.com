@@ -1,5 +1,27 @@
+// structure
+
 .post{
 	max-width: 500px;
 	margin: 0 auto;
 	line-height: 1.5;
+	padding-bottom: 2em;
+}
+
+.comments{
+	padding: 2em 0;
+	border-top: 1px solid $accent-color;
+}
+
+// styles
+
+pre{
+	padding: 2em;
+	background: $accent-light;
+	border-radius: 6px;
+}
+
+blockquote{
+	margin-left:0;
+	padding-left: 1em;
+	border-left: 1px solid $accent-color;
 }

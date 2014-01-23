@@ -10,7 +10,6 @@
 .article-li{
 	max-width: 500px;
 	margin: 0 auto;
-	padding-bottom: 2em;
 	margin-bottom: 2em;
 	border-bottom: 1px solid $accent-color;
 }
@@ -34,3 +33,4 @@
 		@include font-size(1.4);
 	}
 }
+

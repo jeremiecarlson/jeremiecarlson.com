@@ -1,5 +1,5 @@
 name: jeremiecarlson.com
-markdown: redcarpet
+markdown: maruku
 pygments: true
 baseurl: ""
 permalink: pretty

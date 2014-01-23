@@ -7,4 +7,8 @@ layout: default
 		<p class="meta">{{ page.date | date_to_string }}</p>
 	</div>
 	<div class="post">{{ content }}</div>
+	<div class="comments">
+		<button type="button" id="show-comments" class="button">Load Comments</button>
+		<div id="disqus_thread"></div>
+	</div>
 </article>
