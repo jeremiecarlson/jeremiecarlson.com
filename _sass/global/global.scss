@@ -32,6 +32,10 @@ html, button, input, select, textarea{
 	color: $copy-color;
 }
 
+p{
+	line-height: 1.5;
+}
+
 .hidden{
 	opacity: 0;
 }
