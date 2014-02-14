@@ -49,6 +49,38 @@
 	<div role="main" class="main-content">
     
 <article class="article-li">
+	<h1 class="headline h1"><a href="/blog/2014/02/14/handling-different-touch-events/">Handling different touch events and the 300ms delay</a></h2>
+	<p class="meta">14 Feb 2014</p>
+	<div class="post">
+		<p>When the iPhone hit the scene, Apple needed a way to handle all those sites that never imagined they would show up on a tiny screen. One way to help the user zero in on the content that really wanted was the double-tap to zoom feature. Apple engineers came up with an ingenious system that does a kind of smart zoom directly on to the content area where the user would double-tap.</p>
+
+<p>To get the double-tap action to work, an event listener is set that listens for a tap and then must wait for up to 300ms to see if a second tap is coming. This has the unintended consequence of creating the appearance of a slow to respond site. There is a way around it.</p>
+
+<p>It turns out this 300ms delay is attached to the &#39;click&#39; event. This means that if we set event listeners for the device&#39;s native touch action, we can avoid it all together. This is made slightly more difficult in the fact that different browser vendors and device manufacturers handle touch differently.</p>
+
+<p>Webkit, and now Blink currently use <a href="http://www.w3.org/TR/touch-events/">&quot;Touch Events&quot;</a> and Microsoft supports a competing spec called <a href="http://www.w3.org/TR/pointerevents/">&quot;Pointer Events&quot;</a>. I personally think that Pointer Events make a hell of a lot more sense than Touch Events so don&#39;t be too quick to jump on the anti M$FT bandwagon on this one.</p>
+
+<p>There are a few different groups that have attempted to solve this particular issue with good success including the Financial Times&#39; <a href="http://ftlabs.github.io/fastclick/">FastClick</a>. I&#39;ve had a lot of trouble getting FastClick and other similar libraries to work so I&#39;ve come up with my own solution using browser feature detection and <a href="http://modernizr.com/">Modernizr</a>.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">eventType</span> <span class="o">=</span> <span class="s1">&#39;click&#39;</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">pointerEnabled</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">eventType</span> <span class="o">=</span> <span class="s1">&#39;pointerup&#39;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">msPointerEnabled</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">eventType</span> <span class="o">=</span> <span class="s1">&#39;MSPointerUp&#39;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">Modernizr</span><span class="p">.</span><span class="nx">touchevents</span><span class="p">){</span>
+    <span class="nx">eventType</span> <span class="o">=</span> <span class="s1">&#39;touchend&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>What I&#39;m doing here is setting my event type to a variable and going through a series of checks. I default to the click event for non touch-screen devices, then check for <code>pointerup</code> (IE11+ currently), <code>MSPointerEnabled</code> (IE10), and have Modernizr do the hard work of testing for all other touch scenarios which use <code>touchend</code>. I can then use <code>eventType</code> in place of any event listener that I use on the site and ensure that I have the fastest touch action available.</p>
+
+<p>I&#39;d love to hear if anyone has suggestions or a different way that they are handling cross-browser touch interactions.</p>
+
+	</div>
+</article>
+
+<article class="article-li">
 	<h1 class="headline h1"><a href="/blog/2014/01/23/button-type-button/">Button type=button</a></h2>
 	<p class="meta">23 Jan 2014</p>
 	<div class="post">
