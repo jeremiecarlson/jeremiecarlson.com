@@ -12,6 +12,9 @@ $serif: Georgia, Times, "Times New Roman", serif;
 $sans-serif: "museo-sans", sans-serif;
 $base-font-size: 1.6;
 
+// Set device width for ms devices
+@-ms-viewport { width: device-width; }
+
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
