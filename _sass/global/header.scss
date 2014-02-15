@@ -21,6 +21,12 @@
 	margin: -.3em 0 0 .7em;
 }
 
+.site-headline, .site-sub-headline{
+	@include breakpoint(small) { 
+		text-align: center; 
+	}
+}
+
 .site-header:after{
 	position: absolute;
 	bottom: -15px;
