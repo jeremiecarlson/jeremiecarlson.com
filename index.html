@@ -4,8 +4,10 @@ title: Home
 ---
 {% for p in site.posts %}
 <article class="article-li">
-	<h1 class="headline h1"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></h2>
-	<p class="meta">{{ p.date | date_to_string }}</p>
+	<div class="post-header">
+		<h1 class="headline h1"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></h2>
+		<p class="meta">{{ p.date | date_to_string }}</p>
+	</div>
 	<div class="post">
 		{{ p.content }}
 	</div>

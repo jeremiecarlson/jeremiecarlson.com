@@ -26,6 +26,7 @@ html{
 	font-size: 62.5%;
 	@include breakpoint(small) { font-size: 70%; }
 	@include breakpoint(medium) { font-size: 80%; }
+	@include breakpoint(large) { font-size: 90%; }
 }
 
 body{

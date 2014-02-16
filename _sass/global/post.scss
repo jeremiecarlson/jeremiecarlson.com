@@ -1,9 +1,13 @@
 // structure
 
 .post-header, .post, .comments{
-	max-width: 27em;
+	max-width: 30em;
 	@include breakpoint(medium) { max-width: 30em }
 	margin: 0 auto;
+}
+
+.post-header{
+	margin-bottom: 2em;
 }
 
 .post{

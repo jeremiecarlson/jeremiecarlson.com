@@ -5,11 +5,17 @@
 	z-index: 1;
 }
 
+.main-content > .content{
+	max-width: 32em;
+	@include breakpoint(medium) { max-width: 35em }
+	margin: 0 auto;
+}
+
 // article lister
 
 .article-li{
-	max-width: 27em;
-	@include breakpoint(medium) { max-width: 30em }
+	max-width: 32em;
+	@include breakpoint(medium) { max-width: 35em }
 	margin: 0 auto;
 	margin-bottom: 2em;
 	border-bottom: 1px solid $accent-color;
@@ -30,7 +36,7 @@
 	}
 
 	.meta{
-		margin: 0;
+		margin: .5em 0;
 		@include font-size(1.4);
 	}
 }

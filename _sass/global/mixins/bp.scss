@@ -1,11 +1,11 @@
 @mixin breakpoint($point) {
   @if $point == large {
-    @media (min-width: 1600px) { @content; }
+    @media (min-width: 80em) { @content; }
   }
   @else if $point == medium {
-    @media (min-width: 1250px) { @content; }
+    @media (min-width: 62em) { @content; }
   }
   @else if $point == small {
-    @media (min-width: 650px)  { @content; }
+    @media (min-width: 35em)  { @content; }
   }
 }
