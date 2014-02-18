@@ -24,10 +24,14 @@
 
 pre{
 	padding: 2em;
-	background: $accent-light;
 	border-radius: 6px;
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
+	background: linear-gradient(90deg, $accent-light 0%, rgba(255,255,255,0)), linear-gradient(-90deg, $accent-light 0%, rgba(255,255,255,0)) 100% 0, radial-gradient( farthest-side at 0% 50%, rgba(0,0,0,.2), rgba(0,0,0,0) ), radial-gradient( farthest-side at 100% 50%, rgba(0,0,0,.2), rgba(0,0,0,0) ) 100% 0%;
+	background-repeat: no-repeat;
+	background-color: $accent-light;
+	background-size: 100px 100%, 100px 100%, 14px 100%, 14px 100%;
+	background-attachment: local, local, scroll, scroll;
 }
 
 code{
