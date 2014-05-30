@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Jeremie Carlson | Using the Picture Element With Sitecore</title>
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <title>Using the Picture Element With Sitecore</title>
+        <script type="text/javascript">
+          (function() {
+            var config = {
+              kitId: 'gzd4ngb',
+              scriptTimeout: 3000
+            };
+            var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+          })();
+        </script>
+        <script src="/js/vendor/modernizr-2.7.1.js"></script>
+        <link rel="stylesheet" href="/css/screen.css" >
+    </head>
+    <body>
+	<header class="site-header">
+		<h1 class="headline site-headline"><a href="/">a place to house some thoughts and things</a></h1>
+		<nav class="nav-primary" role="navigation" >
+    <ul>
+    	
+    		
+	        <li>
+	        	<a  href="/About/">About</a>
+	        </li>
+	        
+        
+    		
+	        <li>
+	        	<a  href="/Contact/">Contact</a>
+	        </li>
+	        
+        
+    		
+        
+    </ul>
+</nav>
+	</header>
+	<div role="main" class="main-content">
+    <article>
+	<div class="post-header">
+		<h1 class="headline h1">Using the Picture Element With Sitecore</h1>
+		<p class="meta">30 May 2014</p>
+	</div>
+	<div class="post"><p>The <a href="http://www.w3.org/TR/html-picture-element/"><code>&lt;picture&gt;</code></a> element provides a means to display different image assets based on screen size and display density.</p>
+
+<h2>The Syntax</h2>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;picture</span> <span class="na">width=</span><span class="s">&quot;500&quot;</span> <span class="na">height=</span><span class="s">&quot;500&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;source</span> <span class="na">media=</span><span class="s">&quot;(min-width: 45em)&quot;</span> <span class="na">srcset=</span><span class="s">&quot;large-1.jpg 1x, large-2.jpg 2x&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;source</span> <span class="na">media=</span><span class="s">&quot;(min-width: 18em)&quot;</span> <span class="na">srcset=</span><span class="s">&quot;med-1.jpg 1x, med-2.jpg 2x&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">&quot;small-1.jpg 1x, small-2.jpg 2x&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;small-1.jpg&quot;</span> <span class="na">alt=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;p&gt;</span>Accessible text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/picture&gt;</span>
+</code></pre></div>
+<p>This <code>&lt;picture&gt;</code> has a set of possible sources that the browser goes through in order. The first statement that reads as true downloads and displays the related image. The browser checks screen width via the <code>media</code> attribute and can choose the right image for the density of the image in the <code>scrset</code> attribute. If none of the sources read as true, the regular <code>&lt;img&gt;</code> is used. </p>
+
+<h2>How Sitecore Can Enhance the Picture Element</h2>
+
+<p>If there is no desired change in aspect ratio or cropping across screen sizes we can implement <code>&lt;picture&gt;</code> rather easily. Using <a href="http://www.sitecore.net/Community/Technical-Blogs/John-West-Sitecore-Blog/Posts/2011/05/Media-Options-and-Query-String-Parameters-in-the-Sitecore-ASPNET-CMS.aspx">Sitecore&#39;s server side resizing</a> we can automate some of the work in managing all of the required assets. The content editor would be able to input a single large image and Sitecore can handle the rest using the <code>?mw=</code> syntax.</p>
+
+<p>To adapt the same example:</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;picture</span> <span class="na">width=</span><span class="s">&quot;500&quot;</span> <span class="na">height=</span><span class="s">&quot;500&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;source</span> <span class="na">media=</span><span class="s">&quot;(min-width: 45em)&quot;</span> <span class="na">srcset=</span><span class="s">&quot;image.jpg?mw=500 1x, image.jpg?mw=1000  2x&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;source</span> <span class="na">media=</span><span class="s">&quot;(min-width: 18em)&quot;</span> <span class="na">srcset=</span><span class="s">&quot;image.jpg?mw=200 1x, image.jpg?mw=400 2x&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">&quot;image.jpg?mw=75 1x, image.jpg?mw=150 2x&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;image.jpg?mw=75&quot;</span> <span class="na">alt=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;p&gt;</span>Accessible text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/picture&gt;</span>
+</code></pre></div>
+<p>Unfortunately this does little to support the <a href="http://usecases.responsiveimages.org/#art-direction">art direction use case</a>, but it should help create some efficiencies.</p>
+</div>
+	<div class="comments">
+		<button type="button" id="show-comments" class="button">Load Comments</button>
+		<div id="disqus_thread"></div>
+	</div>
+</article>
+    </div>
+<script src="/js/main.js"></script>
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-22318739-1');ga('send','pageview');
+</script>
+</body>
+</html>

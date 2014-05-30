@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Jeremie Carlson | Handling different touch events and the 300ms delay</title>
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <title>Handling different touch events and the 300ms delay</title>
+        <script type="text/javascript">
+          (function() {
+            var config = {
+              kitId: 'gzd4ngb',
+              scriptTimeout: 3000
+            };
+            var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+          })();
+        </script>
+        <script src="/js/vendor/modernizr-2.7.1.js"></script>
+        <link rel="stylesheet" href="/css/screen.css" >
+    </head>
+    <body>
+	<header class="site-header">
+		<h1 class="headline site-headline"><a href="/">a place to house some thoughts and things</a></h1>
+		<nav class="nav-primary" role="navigation" >
+    <ul>
+    	
+    		
+	        <li>
+	        	<a  href="/About/">About</a>
+	        </li>
+	        
+        
+    		
+	        <li>
+	        	<a  href="/Contact/">Contact</a>
+	        </li>
+	        
+        
+    		
+        
+    </ul>
+</nav>
+	</header>
+	<div role="main" class="main-content">
+    <article>
+	<div class="post-header">
+		<h1 class="headline h1">Handling different touch events and the 300ms delay</h1>
+		<p class="meta">14 Feb 2014</p>
+	</div>
+	<div class="post"><p>When the iPhone hit the scene, Apple needed a way to handle all those sites that never imagined they would show up on a tiny screen. One way to help the user zero in on the content that they really wanted was the double-tap to zoom feature. Apple engineers came up with an ingenious system that does a kind of smart zoom directly on to the content area where the user double-taps.</p>
+
+<p>To get the double-tap action to work, an event listener is set that listens for a tap and then must wait for up to 300ms to see if a second tap is coming. This has the unintended consequence of creating the appearance of a slow to respond site. There is a way around it.</p>
+
+<p>It turns out this 300ms delay is attached to the &#39;click&#39; event. This means that if we set event listeners for the device&#39;s native touch action, we can avoid it all together. This is made slightly more difficult in the fact that different browser vendors and device manufacturers handle touch differently.</p>
+
+<p>Webkit, and now Blink currently use <a href="http://www.w3.org/TR/touch-events/">&quot;Touch Events&quot;</a> and Microsoft supports a competing spec called <a href="http://www.w3.org/TR/pointerevents/">&quot;Pointer Events&quot;</a>. I think that Pointer Events make a hell of a lot more sense than Touch Events so don&#39;t be too quick to jump on the anti M$FT bandwagon on this one.</p>
+
+<p>There are a few different groups that have attempted to solve this particular issue with good success including the Financial Times with their library <a href="http://ftlabs.github.io/fastclick/">FastClick</a>. I&#39;ve had a lot of trouble getting FastClick and other similar libraries to work so I&#39;ve come up with my own solution using browser feature detection and <a href="http://modernizr.com/">Modernizr</a>.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">eventType</span> <span class="o">=</span> <span class="s1">&#39;click&#39;</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">pointerEnabled</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">eventType</span> <span class="o">=</span> <span class="s1">&#39;pointerup&#39;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">msPointerEnabled</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">eventType</span> <span class="o">=</span> <span class="s1">&#39;MSPointerUp&#39;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">Modernizr</span><span class="p">.</span><span class="nx">touchevents</span><span class="p">){</span>
+    <span class="nx">eventType</span> <span class="o">=</span> <span class="s1">&#39;touchend&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>What I&#39;m doing here is setting my event type to a variable and going through a series of checks. I default to the click event for non touch-screen devices, then check for <code>pointerup</code> (IE11+ currently), <code>MSPointerUp</code> (IE10), and have Modernizr do the hard work of testing for all other touch scenarios which use <code>touchend</code>. I can then use <code>eventType</code> in place of any event listener that I use on the site and ensure that I have the fastest touch action available.</p>
+
+<p>I&#39;d love to hear if anyone has suggestions or a different way that they are handling cross-browser touch interactions.</p>
+</div>
+	<div class="comments">
+		<button type="button" id="show-comments" class="button">Load Comments</button>
+		<div id="disqus_thread"></div>
+	</div>
+</article>
+    </div>
+<script src="/js/main.js"></script>
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-22318739-1');ga('send','pageview');
+</script>
+</body>
+</html>
