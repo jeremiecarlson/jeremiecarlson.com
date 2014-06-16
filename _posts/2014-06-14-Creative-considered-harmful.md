@@ -3,6 +3,7 @@ layout: post
 title: '"Creative" Considered Harmful'
 date: 2014/6/14 15:21:00
 categories: blog
+description: "Creative as a noun needs to die. No one has a monopoly on creativity. Stop insulting your colleagues."
 ---
 
 Creative as a noun needs to die. 
