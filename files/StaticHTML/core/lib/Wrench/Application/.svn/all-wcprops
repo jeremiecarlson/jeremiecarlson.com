@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Application
+END
+Application.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Application/Application.php
+END
+AutoReloadApplication.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Application/AutoReloadApplication.php
+END
+PageFollowApplication.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Application/PageFollowApplication.php
+END

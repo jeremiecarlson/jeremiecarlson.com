@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench
+END
+ConnectionManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/ConnectionManager.php
+END
+Client.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Client.php
+END
+Connection.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Connection.php
+END
+Server.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Server.php
+END
+Resource.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Resource.php
+END
+BasicServer.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/BasicServer.php
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Socket
+END
+ServerClientSocket.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Socket/ServerClientSocket.php
+END
+ServerSocket.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Socket/ServerSocket.php
+END
+ClientSocket.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Socket/ClientSocket.php
+END
+Socket.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Socket/Socket.php
+END
+UriSocket.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Socket/UriSocket.php
+END

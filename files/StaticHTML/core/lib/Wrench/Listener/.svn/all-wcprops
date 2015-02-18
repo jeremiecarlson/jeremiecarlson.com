@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Listener
+END
+RateLimiter.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Listener/RateLimiter.php
+END
+HandshakeRequestListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Listener/HandshakeRequestListener.php
+END
+Listener.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Listener/Listener.php
+END
+OriginPolicy.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Wrench/Listener/OriginPolicy.php
+END

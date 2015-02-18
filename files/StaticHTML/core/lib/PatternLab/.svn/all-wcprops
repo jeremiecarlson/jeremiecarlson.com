@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/PatternLab
+END
+Watcher.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/PatternLab/Watcher.php
+END
+Console.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/PatternLab/Console.php
+END
+Configurer.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/PatternLab/Configurer.php
+END
+Migrator.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/PatternLab/Migrator.php
+END
+Builder.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/PatternLab/Builder.php
+END
+Generator.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/PatternLab/Generator.php
+END

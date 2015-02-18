@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Mustache/Loader
+END
+FilesystemLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Mustache/Loader/FilesystemLoader.php
+END
+StringLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Mustache/Loader/StringLoader.php
+END
+MutableLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Mustache/Loader/MutableLoader.php
+END
+CascadingLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Mustache/Loader/CascadingLoader.php
+END
+PatternLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Mustache/Loader/PatternLoader.php
+END
+ArrayLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Mustache/Loader/ArrayLoader.php
+END
+InlineLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/lib/Mustache/Loader/InlineLoader.php
+END

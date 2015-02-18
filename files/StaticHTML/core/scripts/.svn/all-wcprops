@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/scripts
+END
+generateSiteWithCSS.command
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/scripts/generateSiteWithCSS.command
+END
+startAutoReloadServer.command
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/scripts/startAutoReloadServer.command
+END
+startPageFollowServer.command
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/scripts/startPageFollowServer.command
+END
+startWatcherWithAutoReload.command
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/scripts/startWatcherWithAutoReload.command
+END
+startWatcher.command
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/scripts/startWatcher.command
+END
+generateSite.command
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/scripts/generateSite.command
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Horizontalintegration-com-2015/!svn/ver/70/trunk/StaticHTML/core/scripts/README
+END
