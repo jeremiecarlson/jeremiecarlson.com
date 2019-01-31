@@ -1,6 +1,5 @@
 name: jeremiecarlson.com
 markdown: redcarpet
-pygments: true
 baseurl: ""
 permalink: pretty
 paginate: 5
